@@ -1,4 +1,4 @@
-## BUDDY
+# BUDDY User Manual
 
 You can use the [editor on GitHub](https://github.com/Philipbear/BUDDY_Metabolomics/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
