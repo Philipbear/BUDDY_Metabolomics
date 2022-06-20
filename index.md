@@ -19,7 +19,7 @@ BUDDY can be freely downloaded on the [Zenodo](https://zenodo.org/record/6581871
 
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_1.PNG" width = "350" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_1.PNG" width = "350" >
 
 Press **Enter** and **Y** to complete the installation. Meanwhile, you will be directed to enable the _Developer Mode_ on your PC.
 
