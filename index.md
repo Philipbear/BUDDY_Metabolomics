@@ -5,10 +5,7 @@
 ## 1. Introduction
 Welcome to BUDDY!
 
-<img src = "https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg" align="right" width = "150" height = "150">
-
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/AppIcon.png" align="right" width = "150" height = "150">
-
 
 
 BUDDY is an open-source cheminformatic software platform developed for MS-based metabolomics research, capitalizing on **bottom-up MS/MS interrogation** and **experiment-specific global peak annotation**.
@@ -22,15 +19,15 @@ BUDDY can be freely downloaded on the [Zenodo](https://zenodo.org/record/6581871
 
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
-<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_1.PNG" width = "350" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_1.PNG" width = "350" >
 
 Press **Enter** and **Y** to complete the installation. Meanwhile, you will be directed to enable the _Developer Mode_ on your PC.
 
-<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_2.PNG" width = "650" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_2.PNG" width = "650" >
 
 You are all set! BUDDY should appear in your **start** menu! 
 
-<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_3.PNG" width = "250" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_3.PNG" width = "250" >
 
 
 
