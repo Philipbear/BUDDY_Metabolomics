@@ -5,6 +5,8 @@
 ## 1. Introduction
 Welcome to BUDDY!
 
+![Image](https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/AppIcon.png)
+
 <img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/AppIcon.png" align="right" width = "150" height = "150">
 
 BUDDY is an open-source cheminformatic software platform developed for MS-based metabolomics research, capitalizing on **bottom-up MS/MS interrogation** and **experiment-specific global peak annotation**.
