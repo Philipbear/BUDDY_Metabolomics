@@ -7,7 +7,6 @@ Welcome to BUDDY!
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/AppIcon.png" align="right" width = "150" height = "150">
 
-
 BUDDY is an open-source cheminformatic software platform developed for MS-based metabolomics research, capitalizing on **bottom-up MS/MS interrogation** and **experiment-specific global peak annotation**.
 
 Bottom-up MS/MS interrogation aims to determine molecular formulae for all metabolic features with significance estimation. Experiment-specific global peak annotation is achieved to select the optimal molecular network considering both individual peak annotations and peak interrelationships. For detailed methodology, please refer to our paper.
@@ -15,19 +14,20 @@ Bottom-up MS/MS interrogation aims to determine molecular formulae for all metab
 Wish you a wonderful journey in BUDDY!
 
 ## 2. Installation
-BUDDY can be freely downloaded on the [Zenodo](https://zenodo.org/record/6581871#.YrD2U3bMKbg) under the _Creative Commons Attribution 4.0 International_ license (https://zenodo.org/record/6581871#.YrD2U3bMKbg). 
+BUDDY can be freely downloaded via this [Zenodo link](https://zenodo.org/record/6581871#.YrD2U3bMKbg) under the _Creative Commons Attribution 4.0 International_ license (https://zenodo.org/record/6581871#.YrD2U3bMKbg). 
 
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_1.PNG" width = "350" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_1.PNG" align="right" width = "150" height = "150">
 
 Press **Enter** and **Y** to complete the installation. Meanwhile, you will be directed to enable the _Developer Mode_ on your PC.
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_2.PNG" width = "650" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/ installation_2.PNG " align="right" width = "150" height = "150">
 
 You are all set! BUDDY should appear in your **start** menu! 
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_3.PNG" width = "250" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/ installation_3.PNG " align="right" width = "150" height = "150">
+
 
 
 
