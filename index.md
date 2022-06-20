@@ -18,15 +18,15 @@ BUDDY can be freely downloaded on the [Zenodo](https://zenodo.org/record/6581871
 
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
-<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_1.PNG" width = "850" >
+<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_1.PNG" width = "350" >
 
 Press **Enter** and **Y** to complete the installation. Meanwhile, you will be directed to enable the _Developer Mode_ on your PC.
 
-<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_2.PNG" width = "850" >
+<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_2.PNG" width = "650" >
 
 You are all set! BUDDY should appear in your **start** menu! 
 
-<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_3.PNG" width = "850" >
+<img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/installation_3.PNG" width = "250" >
 
 
 
