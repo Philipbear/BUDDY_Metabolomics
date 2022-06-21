@@ -43,12 +43,13 @@ There are two panels in the **Functional Viewer**. **Feature Spot Viewer** and *
 **Spectral Comparison** provides a straightforward panel to directly compare two MS/MS spectra. Users can simply drag features with MS/MS from the **Feature List** and drop them here for spectral comparison. In practice, this allows users to quickly check whether two MS/MS are of the same identity or any structural relation.
 ### 3.4 Candidate List
 This panel lists the formula candidates together with their basic information including mass deviations, explained fragment counts & intensities, estimated posterior probabilities and FDRs. Users can highlight each formula candidate to see their corresponding MS/MS explanation quality in the **Result** panel.
+The **Databases** list in the right shows in which chemical databases this formula can be found.
 ### 3.5 MS2 Spectrum
 This panel shows the original MS/MS spectrum and some metadata. Users can left click on the peak apex to show _m/z_ & abundance. Hold right click to adjust the spectrum axis range. Double click the scroll wheel to restore the default view.
 ### 3.6 Result
 There are currently three panels within the **Result** module.
 **MS2 Library Search** is available for seed metabolites (or identified metabolites), showing mirror plots of MS/MS matching and detailed introductions of the identified molecule. Molecule descriptions are mirrored from _PubChem_ using its API, allowing users to perform manual inspections more conveniently.
-**Feature Connection** panel is available when **experiment-specific global annotation** is performed. This panel lists all the metabolic features that are connected to the selected feature and their connection types.
+**Feature Connection** panel is available when the **experiment-specific global annotation** task is performed. This panel lists all the metabolic features that are connected to the selected feature and their connection types.
 **MS2 Explanation Summary** summarizes how the selected formula candidate explains the target MS/MS spectrum in terms of double bond equivalent (DBE) values, hydrogen / C ratios, heteroatom / C ratios and radical fragment ions. These evaluation metrics can be essential to the candidate ranking process.
 ### 3.7 MS2 Fragment Table
 This panel lists all the fragment ions and their subformula annotations. In case that some fragment ions are not annotated within the first-round search, users can apply **MS2 Fragment Reannotation** in **Others** in the advanced settings. The fragment table is sortable.
@@ -61,16 +62,19 @@ BUDDY provides both single query import and batch import.
 For single query import, BUDDY offers a pop-up window. Users can click on the **Demo data** to see the input format. At least one of the MS1 isotope and MS/MS spectrum is required for the following annotation.
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/import_1.PNG" width = "400" >
+
 ### 4.2 Batch import
 BUDDY accepts various formats of batch query import, including metabolic feature tables (output by MS-DIAL or custom tables as indicated), mzML files and MGF files.
 #### 4.2.1 Import from feature table
 If you are using **MS-DIAL** for data preprocessing, you can directly import metabolic feature tables output by MS-DIAL (in **txt** format) into BUDDY. Specifically for feature tables output by MS-DIAL, we offer an addition step of metabolic feature clustering to remove redundant features, which can be set up in the advanced settings.
 
 Otherwise, we also provide a custom feature table format (in **csv**). A template table is downloadable in the pop-up window. Please follow the instructions carefully.
+
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/import_2.PNG" width = "550" >
 
 #### 4.2.2 Import from mzML or MGF file
 You can directly import mzML files containing raw data into BUDDY for downstream analysis. At this stage, we only accept data-dependent acquisition (DDA) data and automatically reserve metabolic features with MS/MS collected. Adjacent MS/MS will be grouped by default using the cosine similarity. MS1 isotope patterns will also be extracted. You can change the relevant parameter details in the advanced settings.
+
 MGF files containing multiple MS/MS spectra can also be directly imported into BUDDY. Every MS/MS will be treated separately, and no addition MS/MS grouping is performed.
  
 ## 5. Settings
@@ -83,9 +87,4 @@ MGF files containing multiple MS/MS spectra can also be directly imported into B
 ## 6. Export Results
 ### 6.1 Export Single MS2
 ### 6.2 Export Batch MS2
-
-## 7. Save and Open BUDDY Project
-### 7.1 Save
-### 7.2 Save As
-### 7.3 Open
 
