@@ -98,3 +98,44 @@ Users can upload their own spectral libraries in **msp** format for metabolite i
 Users here specify the chemical elements that are allowed for formula annotation. The recommended max values are provided according to the [reference](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-105).
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_3.PNG" width = "550" >
+
+#### 5.2.4 Chemical database
+Users here specify the chemical databases in which formulae should be searched. If users do not want to apply any database restriction, **No chemical database restriction** should be checked.
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_4.PNG" width = "550" >
+
+#### 5.2.4 Candidate refinement
+This page of settings helps to further refine formula candidates in terms of MS1 isotope pattern and elemental ratios. Elemental ratio restrictions are set up as summarized in the [reference](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-105).
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_5.PNG" width = "550" >
+
+#### 5.2.5 Adduct
+We provide a list of 16 adduct forms in positive ion mode and 14 in negative ion mode. Users are allowed to add custom adducts.
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_6.PNG" width = "550" >
+
+#### 5.2.6 Raw data preprocessing
+If you are importing metabolite feature tables from MS-DIAL, we are able to conduct additional step of metabolic feature clustering for the features representing the same metabolite. This can avoid redundant annotation process.
+
+For mzML file import, you can customize the data preprocessing on MS1 isotope and MS/MS grouping. MS/MS acquired within the maximum peak width window are grouped together if they share a cosine similarity score above the cut-off value. MS/MS merging will automatically merge the MS/MS spectra of the same identity.
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_7.PNG" width = "550" >
+
+#### 5.2.6 Others
+A timeout setting is offered to cease the computation process on a single query. You can choose to reannotate the subformula information in case that some fragments remain unexplained in the first-round search.
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_8.PNG" width = "550" >
+
+
+## 6. Export results
+### 6.1 Export single query
+**Export Single Query** exports the annotation for a single metabolic feature query, where all the formula candidates and their separate MS/MS explanations are output.
+### 6.2 Export batch results
+To export batch results, we offer two options, **Export Batch Summary** and **Export Detailed Results**. 
+
+**Export Batch Summary** will export a single **csv** file containing all the features within the selected files, where the formulae ranked the highest will be output. 
+
+**Export Detailed Results** will export a zip file, containing annotation results of each file, each MS/MS, each formula candidate and each fragment ion in a hierarchical manner. It usually takes several minutes to **Export Detailed Results** for thousands of metabolic features.
+
+## 7. Save and load BUDDY project
+To save and reload the project space, users can save the current project in BUDDY as a _BUDDY_ file.
