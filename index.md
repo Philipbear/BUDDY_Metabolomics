@@ -80,21 +80,21 @@ MGF files containing multiple MS/MS spectra can also be directly imported into B
 ## 5. Settings
 ### 5.1 Basic settings
 **Basic Settings** is a simplified version of **Advanced Settings**, allowing users to change the most important parameters at the first convenience.
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/basicsettings.PNG" width = "600" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/basicsettings.PNG" width = "550" >
 
 
 ### 5.2 Advanced settings
 #### 5.2.1 General
 BUDDY is able to perform three tasks as shown below. **Experiment-specific global annotation** must be performed together with **Bottom-up MS2 interrogation**. Notably, users can choose to apply meta-score inclusion for annotation, which uses metadata of molecular formulae in chemical databases. This could improve the annotation rate for known formulae at the cost of potentially missing discovery of novel molecular formulae.
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_1.PNG" width = "600" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_1.PNG" width = "550" >
 
 #### 5.2.2 MS2 library search
-Users can upload their own spectral libraries in **msp** format for metabolite identification. By default, the Fiehn HILIC library will be used. We provide three MS/MS searching algorithms—dot product, reverse dot product and spectral entropy similarity. Users can customize metabolite annotation threshold on MS/MS similarity score, minimum matched fragment count and retention time matching.
+Users can upload their own spectral libraries in **msp** format for metabolite identification. By default, the Fiehn HILIC library will be used. We provide three MS/MS searching algorithms—dot product, reverse dot product and spectral entropy similarity. Users can customize metabolite annotation thresholds on MS/MS similarity score, minimum matched fragment count and retention time matching.
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_2.PNG" width = "600" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_2.PNG" width = "550" >
 
 #### 5.2.3 Chemical element
-Users can upload their own spectral libraries in **msp** format for metabolite identification. By default, the Fiehn HILIC library will be used. We provide three MS/MS searching algorithms—dot product, reverse dot product and spectral entropy similarity. Users can customize metabolite annotation threshold on MS/MS similarity score, minimum matched fragment count and retention time matching.
+Users here specify the chemical elements that are allowed for formula annotation. The recommended max values are provided according to the [reference](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-105).
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_3.PNG" width = "600" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/advsettings_3.PNG" width = "550" >
