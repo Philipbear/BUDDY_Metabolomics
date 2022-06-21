@@ -22,7 +22,7 @@ We provide a graphical user interface shown as below.
 - Experiment-specific global peak annotation
 ### File import 
 - Single query import (pop-up window) 
-- Batch import (metabolic feature table or mzML file)
+- Batch import (metabolic feature table, mzML file, mgf file)
 ### Result export
 - Single export (a query feature or an MS/MS table) 
 - Batch export in a hierarchical manner (file – metabolic feature – candidate – explained MS/MS)
