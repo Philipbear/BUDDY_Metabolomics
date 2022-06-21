@@ -31,7 +31,7 @@ You are all set! BUDDY should appear in your **start** menu!
 
 ## 3. Graphical User Interface
 We offer an intuitive graphical user interface for BUDDY. A brief introduction of each panel is provided as below.
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/GUI.png" width = "850" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/GUI.png" width = "950" >
 
 ### 3.1 File List
 This panel contains all the imported files. You can check any file to show its metabolic features in the **Feature List** panel.
@@ -59,11 +59,13 @@ If MS1 isotope pattern is used for annotation, a mirror image of experimental MS
 BUDDY provides both single query import and batch import.
 ### 4.1 Single import
 For single query import, BUDDY offers a pop-up window. Users can click on the **Demo data** to see the input format. At least one of the MS1 isotope and MS/MS spectrum is required for the following annotation.
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/import_1.PNG" width = "350" >
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/import_1.PNG" width = "400" >
 ### 4.2 Batch import
 BUDDY accepts various formats of batch query import, including metabolic feature tables (output by MS-DIAL or custom tables as indicated), mzML files and MGF files.
 #### 4.2.1 Import from feature table
 If you are using **MS-DIAL** for data preprocessing, you can directly import metabolic feature tables output by MS-DIAL (in **txt** format) into BUDDY. Specifically for feature tables output by MS-DIAL, we offer an addition step of metabolic feature clustering to remove redundant features, which can be set up in the advanced settings.
+
 Otherwise, we also provide a custom feature table format (in **csv**). A template table is downloadable in the pop-up window. Please follow the instructions carefully.
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/import_2.PNG" width = "550" >
 
@@ -71,3 +73,19 @@ Otherwise, we also provide a custom feature table format (in **csv**). A templat
 You can directly import mzML files containing raw data into BUDDY for downstream analysis. At this stage, we only accept data-dependent acquisition (DDA) data and automatically reserve metabolic features with MS/MS collected. Adjacent MS/MS will be grouped by default using the cosine similarity. MS1 isotope patterns will also be extracted. You can change the relevant parameter details in the advanced settings.
 MGF files containing multiple MS/MS spectra can also be directly imported into BUDDY. Every MS/MS will be treated separately, and no addition MS/MS grouping is performed.
  
+## 5. Settings
+### 5.1 Basic Settings
+**Basic Settings** is a simplified version of **Advanced Settings**, allowing users to change the most important parameters at the first convenience.
+### 5.2 Advanced Settings
+#### 5.2.1 General
+
+
+## 6. Export Results
+### 6.1 Export Single MS2
+### 6.2 Export Batch MS2
+
+## 7. Save and Open BUDDY Project
+### 7.1 Save
+### 7.2 Save As
+### 7.3 Open
+
