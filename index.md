@@ -15,7 +15,7 @@ Bottom-up MS/MS interrogation aims to determine molecular formulae for all metab
 Wish you a wonderful journey in BUDDY!
 
 ## 2. Installation
-BUDDY can be freely downloaded via this [Zenodo link](https://zenodo.org/record/6581871#.YrD2U3bMKbg) under the _Creative Commons Attribution 4.0 International_ license (https://zenodo.org/record/6581871#.YrD2U3bMKbg). 
+BUDDY can be freely downloaded on this [GitHub release page](https://github.com/Philipbear/BUDDY_Metabolomics/releases/tag/v1.0). 
 
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
