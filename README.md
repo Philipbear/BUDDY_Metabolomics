@@ -10,7 +10,7 @@ Bottom-up MS/MS interrogation aims to determine molecular formulae for all metab
 
 ## Quick Start
 ### Installation
-`BUDDY` can be freely downloaded on the [Zenodo](https://zenodo.org/record/6581871#.YrD2U3bMKbg) under the __Creative Commons Attribution 4.0 International__ license (https://zenodo.org/record/6581871#.YrD2U3bMKbg).
+`BUDDY` can be freely downloaded on the [GitHub](https://github.com/Philipbear/BUDDY_Metabolomics/releases/tag/v1.0).
 
 We provide a graphical user interface shown as below.
 <img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/GUI.png" width = "850" >
