@@ -1,0 +1,121 @@
+biochemical,H-1N-1O1,0.984016,Deamination
+biochemical,H3N1O-1,1.031634,Transamination
+biochemical,H2,2.01565,hydrogenation
+abiotic,H-3B1,7.98583,adduct
+biochemical,C1H2,14.01565,methylation
+biochemical,H1N1,15.010899,addition of NH
+biochemical,O1,15.994915,oxidation
+abiotic,H3N1,17.026549,ammonia
+biochemical,H3N1,17.026549,addition of ammonia
+abiotic,H2O1,18.010565,addition of water
+biochemical,H2O1,18.010565,addition of water
+abiotic,H-1Na1,21.981944,adduct
+abiotic,H-1B1O1,25.996395,adduct
+abiotic,C1H1N1,27.010899,adduct
+biochemical,C1O1,27.994915,addition of CO
+biochemical,C2H4,28.0313,addition of C2H4
+biochemical,H-2O2,29.97418,nitrification
+abiotic,C1H2O1,30.01056468,addition of CH2O
+biochemical,S1,31.972071,thiolation
+abiotic,C1H4O1,32.026215,adduct
+abiotic,H1Cl1,35.976678,adduct
+biochemical,H4O2,36.02113,addition of 2H2O
+abiotic,H-1K1,37.955882,adduct
+abiotic,H1Na1O1,39.992509,adduct
+abiotic,C2H3N1,41.026549,adduct
+biochemical,C2H2O1,42.010565,acetylation
+abiotic,H-2Na2,43.963888,adduct
+abiotic,C1O2,43.98983,addition of CO2
+biochemical,C1O2,43.98983,addition of CO2
+biochemical,H-1N1O2,44.985079,addition of nitro
+abiotic,C1H2O2,46.00548,adduct
+biochemical,O3,47.984745,thiol to sulfonic acid
+abiotic,H1K1O1,55.966447,adduct
+biochemical,C3H4O1,56.026215,propionylation
+biochemical,C2H3N1O1,57.021463,glycine
+biochemical,C2H2O2,58.00548,addition of acetic acid
+abiotic,C2H4O2,60.02113,adduct
+abiotic,C1H2O3,62.000395,adduct
+abiotic,H1N1O3,62.995644,adduct
+abiotic,C1H1Na1O2,67.987424,adduct
+biochemical,C4H4O1,68.026215,crotonylation
+biochemical,C5H8,68.0626,isoprenylation
+biochemical,C4H6O1,70.041865,butyrylation
+biochemical,C3H5N1O1,71.037113,alanine
+abiotic,H-2K2,75.911764,adduct
+biochemical,C6H4,76.0313,addition of phenyl
+abiotic,H2O3Si1,77.977322,adduct
+biochemical,O3S1,79.956816,sulfate conjugation
+biochemical,H1O3P1,79.966332,addition of phosphate
+abiotic,C2H3Na1O2,82.003074,adduct
+biochemical,C5H6O1,82.041865,addition of tiglyl
+abiotic,C1H1K1O2,83.961362,adduct
+abiotic,C1H1Na1O3,83.982339,adduct
+abiotic,N1Na1O3,84.977588,adduct
+biochemical,C5H11N1,85.089149,addition of choline
+biochemical,C3H2O3,86.000395,malonylation
+biochemical,C3H5N1O2,87.032028,serine
+biochemical,C7H6,90.04695,addition of benzyl
+biochemical,C4H3N3,93.032697,addition of cytosine
+biochemical,C4H2N2O1,94.016713,addition of uracil
+abiotic,H4O4Si1,95.987887,adduct
+biochemical,C5H7N1O1,97.052764,proline
+abiotic,H2O4S1,97.967381,adduct
+abiotic,H3O4P1,97.976897,adduct
+abiotic,C2H3K1O2,97.977012,adduct
+biochemical,C5H9N1O1,99.068414,valine
+abiotic,C1H1K1O3,99.956277,adduct
+biochemical,C4H4O3,100.016045,succinylation
+biochemical,C4H7N1O2,101.047678,threonine
+biochemical,C3H5N1O1S1,103.009184,cysteine
+biochemical,C2H5N1O2S1,107.0041,taurine conjugation
+biochemical,C5H4N2O1,108.032363,addition of thymine
+biochemical,C6H11N1O1,113.084064,(iso)leucine
+biochemical,C5H6O3,114.031695,glutaryllation
+biochemical,C4H6N2O2,114.042927,asparagine
+biochemical,C4H5N1O3,115.026943,aspartate
+biochemical,C5H3N5O-1,117.04393,addition of adenine
+biochemical,C3H5N1O2S1,119.0041,S-cysteine conjugation
+abiotic,H1Na1O4S1,119.949325,adduct
+abiotic,H2Na1O4P1,119.958841,adduct
+abiotic,C3H8O3Si1,120.024272,adduct
+biochemical,C5H8N2O2,128.058577,glutamine
+biochemical,C6H12N2O1,128.094963,lysine
+biochemical,C5H7N1O3,129.042593,glutamate
+biochemical,C5H9N1O1S1,131.040485,methionine
+biochemical,C5H8O4,132.04226,addition of ribose
+biochemical,C5H3N5,133.038845,addition of guanine
+abiotic,H1K1O4S1,135.923263,adduct
+abiotic,H2K1O4P1,135.932779,adduct
+biochemical,C6H7N3O1,137.058912,histidine
+biochemical,C7H13N1O2,143.094629,addition of carnitine
+biochemical,C5H9N1O2S1,147.034851,S-methionine
+biochemical,C9H9N1O1,147.068414,phenylalanine
+biochemical,C3H4N1O1Se1,149.945821,selenocysteine
+biochemical,C6H12N4O1,156.101111,arginine
+biochemical,C10H7N1O1,157.052764,indole acetylation
+biochemical,H2O6P2,159.932664,addition of di-phosphate
+biochemical,C5H7N1O3S1,161.014665,addition of N-acetyl-S-cysteine
+biochemical,C6H10O5,162.052825,addition of hexose
+biochemical,C9H9N1O2,163.063328,tyrosine
+biochemical,C3H4N1O2Se1,165.940187,Se-selenocysteine
+biochemical,C6H8O6,176.03209,addition of glucuronic acid
+biochemical,C11H10N2O1,186.079313,tryptophan
+abiotic,H6O8P2,195.953794,adduct
+biochemical,C10H12N2O4,224.079708,addition of thymidine
+biochemical,C9H11N3O4,225.074957,addition of cytidine
+biochemical,C9H10N2O5,226.058973,addition of uridine
+biochemical,C12H19N3O2,237.147727,pyrrolysine
+biochemical,C16H30O1,238.229665,addition of palmitic acid
+biochemical,H3O9P3,239.898996,addition of tri-phosphate
+biochemical,C6H11O8P1,242.019157,addition of glucose-6-phosphate
+biochemical,C10H11N5O3,249.08619,addition of adenosine
+biochemical,C10H11N5O4,265.081105,addition of guanosine
+biochemical,C10H15N3O5S1,289.073243,addition of glutathione
+biochemical,C11H17N1O8,291.095419,addition of sialic acid
+biochemical,C10H15N3O6S1,305.068158,addition of S-glutathione
+biochemical,C12H20O10,324.10565,addition of di-hexose
+biochemical,C10H12N5O6P1,329.052522,addition of AMP
+biochemical,C9H13N3O10P2,385.007621,addition of CDP
+biochemical,C18H30O15,486.158475,addition of tri-hexose
+biochemical,C15H21N5O13P2,541.061114,ADP-ribosylation
