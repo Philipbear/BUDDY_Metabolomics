@@ -7,20 +7,19 @@ Welcome to BUDDY!
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/AppIcon.png" align="right" width = "150" height = "150">
 
-BUDDY is an open-source cheminformatic software platform developed for MS-based metabolomics research, capitalizing on **bottom-up MS/MS interrogation** and **experiment-specific global peak annotation**.
+BUDDY is an open-source cheminformatic software platform, capitalizing on **bottom-up MS/MS interrogation** and **experiment-specific global peak annotation**.
 
-Bottom-up MS/MS interrogation aims to determine molecular formulae for all metabolic features with significance estimation. Experiment-specific global peak annotation aims to construct valid biotic or abiotic metabolic feature connections while refining individual feature annotations.is achieved to select the optimal molecular network considering both individual peak annotations and peak interrelationships. For detailed methodology, please refer to our paper.
+Bottom-up MS/MS interrogation aims to determine molecular formulae for all metabolic features with significance estimation. Experiment-specific global peak annotation aims to construct valid biotic or abiotic metabolic feature connections while refining individual feature annotations. For detailed methodology, please refer to our paper.
 
 Wish you a wonderful journey in BUDDY!
 
 ## 2. Installation
-BUDDY can be freely downloaded via this [Zenodo link](https://zenodo.org/record/6581871#.YrD2U3bMKbg) under the _Creative Commons Attribution 4.0 International_ license (https://zenodo.org/record/6581871#.YrD2U3bMKbg). 
-
+`BUDDY` can be freely downloaded on this [GitHub release page](https://github.com/Philipbear/BUDDY_Metabolomics/releases/tag/v1.0).
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_1.PNG" width = "350" >
 
-Press **Enter**. Once a pop-up window appears, then pressand **Y**. to complete the installation. Meanwhile, you will be directed to enable the _Developer Mode_ on your PC.
+Press **Enter**. Once a pop-up window appears, then press **Y**. Meanwhile, you will be directed to enable the _Developer Mode_ on your PC.
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_2.PNG" width = "600" >
 
