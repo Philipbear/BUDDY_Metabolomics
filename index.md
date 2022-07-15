@@ -79,6 +79,7 @@ MGF files containing multiple MS/MS spectra can also be directly imported into B
 ## 5. Settings
 ### 5.1 Basic settings
 **Basic Settings** is a simplified version of **Advanced Settings**, allowing users to change the most important parameters at the first convenience (Menu: **Settings** - **Basic**).
+
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/basicsettings.PNG" width = "550" >
 
 
@@ -140,6 +141,7 @@ To export batch results, we offer two options, **Export Batch Summary** and **Ex
 
 ## 7. Save and load BUDDY project
 To save and reload the project space, users can save the current project in BUDDY as a _BUDDY_ file and reload it back to BUDDY.
-Save project: Menu: **Project** - **Save** or **Save as**.
-Open project: Menu: **Project** - **Open**.
 
+Save project: Menu: **Project** - **Save** or **Save as**.
+
+Open project: Menu: **Project** - **Open**.
