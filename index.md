@@ -15,6 +15,7 @@ Wish you a wonderful journey in BUDDY!
 
 ## 2. Installation
 `BUDDY` can be freely downloaded on this [GitHub release page](https://github.com/Philipbear/BUDDY_Metabolomics/releases/tag/v1.0).
+
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_1.PNG" width = "350" >
