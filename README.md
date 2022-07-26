@@ -24,8 +24,8 @@ We provide a graphical user interface shown as below.
 - Single query import (pop-up window) 
 - Batch import (metabolic feature table, mzML file, mgf file)
 ### Result export
-- Single export (a query feature or an MS/MS table) 
-- Batch export in a hierarchical manner (file – metabolic feature – candidate – explained MS/MS)
+- Single export (a single query feature) 
+- Batch export in a hierarchical manner (file – metabolic feature – candidate formula – explained MS/MS)
 
 ## User Manual
 Detailed instructions on `BUDDY` can be found in [BUDDY user munual](https://philipbear.github.io/BUDDY_Metabolomics).
