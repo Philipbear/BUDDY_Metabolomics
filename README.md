@@ -8,7 +8,7 @@
 
 Bottom-up MS/MS interrogation aims to determine molecular formulae for all metabolic features with significance estimation. Experiment-specific global peak annotation is achieved to select the optimal molecular network considering both individual peak annotations and peak interrelationships.
 
-Check out [our Youtube video](https://www.youtube.com/watch?v=Ne_Y0vZ0WKI).
+Check out [our Youtube tutorial video](https://www.youtube.com/watch?v=Ne_Y0vZ0WKI) here.
 
 ## Quick Start
 ### Installation
