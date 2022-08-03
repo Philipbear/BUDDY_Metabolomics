@@ -30,29 +30,29 @@ You are all set! BUDDY should appear in your **start** menu by searching for _BU
 
 ## 3. Graphical User Interface
 We offer an intuitive graphical user interface for BUDDY. A brief introduction of each panel is provided as below.
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/GUI_label.png" width = "950" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/GUI_label2.png" width = "950" >
 
-### 3.1 File List (panel 1)
+### 3.1 File List (panel A)
 This panel contains all the imported files (single or batch import). You can check any file to show its metabolic features in the **Feature List** panel.
-### 3.2 Feature List (panel 2)
+### 3.2 Feature List (panel B)
 This panel contains all the metabolic features within the selected files. You can sort each column by clicking on the column name. You can redefine the adduct form for each feature by double clicking the adduct box. To check multiple features, highlight wanted features with **Ctrl** pressed, and click **Select Multiple**. To select or unselect all the features shown in the list, click **(Un)Select All**. During the computation, a progress bar will appear in the bottom left corner. After calculation, features labelled with the blue “S” are identified features (according to the set-up metabolite identification threshold).
-### 3.3 Functional Viewer (panel 3)
+### 3.3 Functional Viewer (panel C)
 There are two panels in the **Functional Viewer**. **Feature Spot Viewer** and **Spectral Comparison**.
 **Feature Spot Viewer** offers a scatter plot in the _m/z_-RT domain. It shows the all the feature spots within the selected file in the **File List**.
 **Spectral Comparison** provides a straightforward panel to directly compare two MS/MS spectra. Users can simply drag features with MS/MS from the **Feature List** and drop them here for spectral comparison. In practice, this allows users to quickly check whether two MS/MS are of the same identity or any structural relation.
-### 3.4 Candidate List (panel 4)
+### 3.4 Candidate List (panel D)
 This panel lists the formula candidates together with their basic information including mass deviations, explained fragment counts & intensities, estimated posterior probabilities and FDRs. Users can highlight each formula candidate to see their corresponding MS/MS explanation quality in the **Result** panel.
 The **Databases** list in the right shows in which chemical databases this formula can be found.
-### 3.5 MS2 Spectrum (panel 5)
+### 3.5 MS2 Spectrum (panel E)
 This panel shows the original MS/MS spectrum and some metadata. Users can left click on the peak apex to show _m/z_ & abundance. Hold right click to adjust the spectrum axis range. Double click the scroll wheel to restore the default view.
-### 3.6 Result (panel 6)
+### 3.6 Result (panel F)
 There are currently three panels within the **Result** module.
 **MS2 Library Search** is available for seed metabolites (or identified metabolites), showing mirror plots of MS/MS matching and detailed introductions of the identified molecule. Molecule descriptions are mirrored from _PubChem_ using its API, allowing users to perform manual inspections more conveniently.
 **Feature Connection** panel is available when the **experiment-specific global annotation** task is performed. This panel lists all the metabolic features that are connected to the selected feature and their connection types.
 **MS2 Explanation Summary** summarizes how the selected formula candidate explains the target MS/MS spectrum in terms of double bond equivalent (DBE) values, hydrogen / C ratios, heteroatom / C ratios and radical fragment ions. These evaluation metrics can be essential to the candidate ranking process.
-### 3.7 MS2 Fragment Table (panel 7)
+### 3.7 MS2 Fragment Table (panel G)
 This panel lists all the fragment ions and their subformula annotations. In case that some fragment ions are not annotated within the first-round search, users can apply **MS2 Fragment Reannotation** in **Others** in the advanced settings. The fragment table is sortable.
-### 3.8 MS1 Isotope Matching (panel 8)
+### 3.8 MS1 Isotope Matching (panel H)
 If MS1 isotope pattern is used for annotation, a mirror image of experimental MS1 isotope and theoretical isotope pattern will be shown here. The detailed MS1 isotope similarity algorithm can be found within the supplementary information of our paper.
 
 ## 4. Data import
