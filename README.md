@@ -12,7 +12,7 @@ Check out [our Youtube tutorial video](https://www.youtube.com/watch?v=Ne_Y0vZ0W
 
 ## Quick Start
 ### Installation
-`BUDDY` can be freely downloaded on this [GitHub release page](https://github.com/Philipbear/BUDDY_Metabolomics/releases/tag/v1.0).
+`BUDDY` can be freely downloaded on this [GitHub release page](https://github.com/Philipbear/BUDDY_Metabolomics/releases).
 
 We provide a graphical user interface shown as below.
 <img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/GUI.png" width = "850" >
