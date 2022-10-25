@@ -18,6 +18,7 @@ Wish you a wonderful journey in BUDDY!
 
 ### 2.1 First-time installation
 If this is your first time to install BUDDY on your PC, please do as follows.
+
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_1.PNG" width = "350" >
