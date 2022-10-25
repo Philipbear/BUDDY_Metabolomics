@@ -16,6 +16,8 @@ Wish you a wonderful journey in BUDDY!
 ## 2. Installation
 `BUDDY` can be freely downloaded on this [GitHub release page](https://github.com/Philipbear/BUDDY_Metabolomics/releases/tag/v1.0).
 
+### 2.1 First-time installation
+If this is your first time to install BUDDY on your PC, please do as follows.
 Unzip and open the downloaded file, right click the “Install.ps1” file and **Run with PowerShell**.
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_1.PNG" width = "350" >
@@ -27,6 +29,16 @@ Press **Enter**. Once a pop-up window appears, then press **Y**. Meanwhile, you 
 You are all set! BUDDY should appear in your **start** menu by searching for _BUDDY_! 
 
 <img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_3.PNG" width = "300" >
+
+### 2.2 Installation of an updated version
+If you have BUDDY already installed on your PC and you are installing an updated version, please do as follows.
+Unzip and open the downloaded file, double click the “BUDDY_x.x.0.0_x64.msixbundle” file.
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_4.PNG" width = "350" >
+
+You will be directed to a window as below. Click **Update**, and you are all set!
+
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_5.PNG" width = "350" >
 
 ## 3. Graphical User Interface
 We offer an intuitive graphical user interface for BUDDY. A brief introduction of each panel is provided as below.
