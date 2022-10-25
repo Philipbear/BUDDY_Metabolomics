@@ -39,7 +39,7 @@ Unzip and open the downloaded file, double click the “BUDDY_x.x.0.0_x64.msixbu
 
 You will be directed to a window as below. Click **Update**, and you are all set!
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_5.PNG" width = "600" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_5.PNG" width = "500" >
 
 ## 3. Graphical User Interface
 We offer an intuitive graphical user interface for BUDDY. A brief introduction of each panel is provided as below.
