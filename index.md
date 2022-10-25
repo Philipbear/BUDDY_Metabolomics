@@ -35,11 +35,11 @@ You are all set! BUDDY should appear in your **start** menu by searching for _BU
 If you have BUDDY already installed on your PC and you are installing an updated version, please do as follows.
 Unzip and open the downloaded file, double click the “BUDDY_x.x.0.0_x64.msixbundle” file.
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_4.PNG" width = "350" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_4.PNG" width = "600" >
 
 You will be directed to a window as below. Click **Update**, and you are all set!
 
-<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_5.PNG" width = "350" >
+<img src = "https://raw.githubusercontent.com/Philipbear/BUDDY_Metabolomics/main/image/installation_5.PNG" width = "400" >
 
 ## 3. Graphical User Interface
 We offer an intuitive graphical user interface for BUDDY. A brief introduction of each panel is provided as below.
