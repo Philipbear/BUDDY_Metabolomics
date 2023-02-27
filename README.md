@@ -10,11 +10,13 @@ Bottom-up MS/MS interrogation aims to determine molecular formulae for all metab
 
 Check out [our Youtube tutorial video](https://www.youtube.com/watch?v=Ne_Y0vZ0WKI) here.
 
-
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 # Upcoming Version
 
-We will be soon releasing a python package 'pybuddy' for molecular formula annotation (hopefully by Apr. 2023). If you want to use 'BUDDY' in large scale or in a more customizable manner, please stay tuned for [our latest release](https://github.com/Philipbear/pybuddy).
-
+We will be soon releasing a python package `pybuddy` for molecular formula annotation (hopefully by Apr. 2023). If you want to use 'BUDDY' in large scale or in a more customizable manner, please stay tuned for [our latest release](https://github.com/Philipbear/pybuddy).
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 
 ## Quick Start (BUDDY GUI version)
