@@ -15,7 +15,7 @@ Check out [our Youtube tutorial video](https://www.youtube.com/watch?v=Ne_Y0vZ0W
 &nbsp;
 # Upcoming Version
 
-We will be soon releasing a python package `pybuddy` (hopefully in Apr. 2023).
+We will be soon releasing a python package `pybuddy` (hopefully in May 2023).
 
 If you want to use `BUDDY` in large scale or in a more customizable manner, please stay tuned for [our latest release](https://github.com/Philipbear).
 
