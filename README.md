@@ -50,4 +50,4 @@ Detailed instructions on `BUDDY` can be found in [BUDDY user manual](https://phi
 ## Issue Report
 Any feedback or bug report is welcome. (https://github.com/Philipbear/BUDDY_Metabolomics/issues)
 ## Citation
-Shipei Xing, Sam Shen, Banghua Xu, Xiaoxiao Li and Tao Huan. [BUDDY: molecular formula discovery via bottom-up MS/MS interrogation. Nature Methods, in press.](https://www.biorxiv.org/content/10.1101/2022.08.03.502704v1)
+[Xing, S., Shen, S., Xu, B. et al. BUDDY: molecular formula discovery via bottom-up MS/MS interrogation. Nat. Methods (2023). https://doi.org/10.1038/s41592-023-01850-x](https://doi.org/10.1038/s41592-023-01850-x)
