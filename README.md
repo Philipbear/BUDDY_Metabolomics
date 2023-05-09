@@ -1,5 +1,5 @@
 # BUDDY
-[![Generic badge](https://img.shields.io/badge/BUDDY-ver_1.0-<COLOR>.svg)](https://github.com/Philipbear/BUDDY_Metabolomics)
+[![Generic badge](https://img.shields.io/badge/BUDDY-ver_1.7-<COLOR>.svg)](https://github.com/Philipbear/BUDDY_Metabolomics)
 ![Maintainer](https://img.shields.io/badge/maintainer-Shipei_Xing-blue)
 
 <img src = "https://github.com/Philipbear/BUDDY_Metabolomics/blob/main/image/AppIcon.png" align="right" width = "150" height = "150">
