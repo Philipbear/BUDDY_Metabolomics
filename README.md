@@ -13,11 +13,9 @@ Check out [our Youtube tutorial video](https://www.youtube.com/watch?v=Ne_Y0vZ0W
 
 &nbsp;
 &nbsp;
-# Upcoming Version
+# Python packge & Command-line tool
 
-We will be soon releasing a python package `pybuddy`.
-
-If you want to use `BUDDY` in large scale or in a more customizable manner, please stay tuned for [our latest release](https://github.com/Philipbear).
+We have now released `msbuddy` as a Python package and a command-line tool. [Try it now](https://github.com/Philipbear/msbuddy)!
 
 You are welcome to contact me via **philipxsp@hotmail.com** should you have any questions or suggestions.
 
