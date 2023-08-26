@@ -15,7 +15,9 @@ Check out [our Youtube tutorial video](https://www.youtube.com/watch?v=Ne_Y0vZ0W
 &nbsp;
 # Python packge & Command-line tool
 
-We have now released `msbuddy` as a Python package and a command-line tool. [Try it now](https://github.com/Philipbear/msbuddy)!
+
+**We have now released `msbuddy` as a Python package and a command-line tool. [Try it now](https://github.com/Philipbear/msbuddy)!**
+
 
 You are welcome to contact me via **philipxsp@hotmail.com** should you have any questions or suggestions.
 
