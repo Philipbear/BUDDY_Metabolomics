@@ -48,8 +48,6 @@ We provide a graphical user interface shown as below.
 
 ## User Manual
 Detailed instructions on `BUDDY` can be found in [BUDDY user manual](https://philipbear.github.io/BUDDY_Metabolomics).
-## Issue Report
-Any feedback or bug report is welcome. (https://github.com/Philipbear/BUDDY_Metabolomics/issues)
 ## Citation
 > S. Xing et al. BUDDY: molecular formula discovery via bottom-up MS/MS interrogation. **Nature Methods** 2023. [DOI: 10.1038/s41592-023-01850-x](https://doi.org/10.1038/s41592-023-01850-x)
 
