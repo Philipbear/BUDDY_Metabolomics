@@ -21,7 +21,7 @@ We have now released `msbuddy` as a Python package and a command-line tool.
 
 > **Note**: `msbuddy` and `BUDDY` and two different tools that share the same core algorithm. They generate different annotation results.
 `msbuddy` is newly developed for flexible molecular formula analysis with refined algorithmic design and model training.
-We'd recommend using `msbuddy` for latest analysis.
+We'd recommend using `msbuddy` for your latest analysis.
 
 
 &nbsp;
