@@ -27,7 +27,7 @@ We'd recommend using `msbuddy` for latest analysis.
 &nbsp;
 &nbsp;
 
-# BUDDY (GUI)
+# BUDDY - GUI
 [![Generic badge](https://img.shields.io/badge/BUDDY-ver_1.7-<COLOR>.svg)](https://github.com/Philipbear/BUDDY_Metabolomics)
 ![Maintainer](https://img.shields.io/badge/maintainer-Shipei_Xing-blue)
 
