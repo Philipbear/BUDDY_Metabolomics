@@ -426,19 +426,27 @@ namespace BUDDY
                 newMS2.Filename = file.FileName;
                 if (records[i].adduct != "" && records[i].adduct != "NA")
                 {
-                    if (records[i].polarity == "P" && adductList_PosString.Contains(records[i].adduct))
+                    //if (records[i].polarity == "P" && adductList_PosString.Contains(records[i].adduct))
+                    //{
+                    //    newMS2.Adduct = new Adduct(records[i].adduct);
+                    //}
+                    //else if (records[i].polarity == "N" && adductList_NegString.Contains(records[i].adduct))
+                    //{
+                    //    newMS2.Adduct = new Adduct(records[i].adduct);
+                    //}
+                    //else
+                    //{
+                    //    continue;
+                    //}
+
+                    try
                     {
                         newMS2.Adduct = new Adduct(records[i].adduct);
                     }
-                    else if (records[i].polarity == "N" && adductList_NegString.Contains(records[i].adduct))
-                    {
-                        newMS2.Adduct = new Adduct(records[i].adduct);
-                    }
-                    else
+                    catch
                     {
                         continue;
                     }
-
                 }
                 else
                 {

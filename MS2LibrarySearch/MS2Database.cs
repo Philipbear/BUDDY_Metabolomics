@@ -153,7 +153,7 @@ namespace BUDDY.MS2LibrarySearch
 
                     // test whether this entry is valid
                     // precursormz : double; ms2spec count > 0; ion mode: P/N ; formula: parsable; inchikey: 27 characters
-                    if (validEntry && FirstEntry == false && InChIKeyStr != null && FormulaStr != null && IonModeStr != null && MS2Spec.Count > 0)
+                    if (validEntry && FirstEntry == false && InChIKeyStr != null && FormulaStr != null && IonModeStr != null && MS2Spec != null)
                     {
                         currEntry.DBNumberString = DBNumberStringStr;
                         currEntry.InChIKey = InChIKeyStr;
@@ -174,9 +174,11 @@ namespace BUDDY.MS2LibrarySearch
 
                         // debug
                         //Debug.WriteLine("DB total count: " + ms2db_list.Count);
-                        //Debug.WriteLine("name: " + currEntry.MetaboliteName);
+
                     }
                     FirstEntry = false;
+
+                    //Debug.WriteLine("name: " + currEntry.MetaboliteName);
 
                     // a new MS2 entry
                     currEntry = new MS2DBEntry();
@@ -258,7 +260,12 @@ namespace BUDDY.MS2LibrarySearch
                     InstrumentTypeStr = line.Substring(17);
                     continue;
                 }
-                if (line.Contains("Instrument: "))
+                if (line.Contains("INSTRUMENTTYPE: "))
+                {
+                    InstrumentTypeStr = line.Substring(16);
+                    continue;
+                }
+                if (line.Contains("Instrument: ") || line.Contains("INSTRUMENT: "))
                 {
                     InstrumentStr = line.Substring(11);
                     continue;
@@ -336,94 +343,128 @@ namespace BUDDY.MS2LibrarySearch
                 }
 
             }
-            ms2db_list.Add(currEntry);
+
+            if (validEntry && FirstEntry == false && InChIKeyStr != null && FormulaStr != null && IonModeStr != null && MS2Spec != null)
+            {
+                currEntry.DBNumberString = DBNumberStringStr;
+                currEntry.InChIKey = InChIKeyStr;
+                currEntry.Adduct = AdductStr;
+                currEntry.PrecursorMz = PrecursorMz;
+                currEntry.InstrumentType = InstrumentTypeStr;
+                currEntry.Instrument = InstrumentStr;
+                currEntry.IonMode = IonModeStr;
+                currEntry.CollisionEnergy = CollisionEnergyStr;
+                currEntry.Formula = FormulaStr;
+                currEntry.Comments = CommentsStr;
+                currEntry.MS2Spec = MS2Spec;
+                currEntry.InChIKeyFirstHalf = InChIKeyStr.Substring(0, 14);
+                currEntry.ValidRT = ValidRT;
+                currEntry.RTminute = RTminute;
+
+                ms2db_list.Add(currEntry);
+            }
+            //Debug.WriteLine("ms2DB: " + ms2db_list.Count);
+
             return ms2db_list;
         }
 
         public static Tuple<bool,string> FormulaValidilityCheck(string formula) // return bool, string: proton-adjusted formula
         {
+            if (formula == "")
+            {
+                return new Tuple<bool, string>(false, "");
+            }
+
             string[] elementStr = new string[] { "C", "H", "N", "O", "P", "F", "Cl", "Br", "I", "S", "Si", "B", "Se" };
             bool validFormula = true;
 
-            IMolecularFormula mf = MolecularFormulaManipulator.GetMolecularFormula(formula);
-            //double mass1 = MolecularFormulaManipulator.GetMass(mf1, MolecularWeightTypes.MonoIsotopic);
+            try
+            {
+                IMolecularFormula mf = MolecularFormulaManipulator.GetMolecularFormula(formula);
+                //double mass1 = MolecularFormulaManipulator.GetMass(mf1, MolecularWeightTypes.MonoIsotopic);
 
-            var ele = mf.Isotopes;
-            foreach (var item in ele)
-            {
-                if (!Array.Exists(elementStr, o => o == item.Symbol))
-                {
-                    validFormula = false;
-                    break;
-                }
-            }
 
-            int charge = 0;
-            if (formula.Contains("+"))
-            {
-                if (formula.Contains("]"))
+                var ele = mf.Isotopes;
+                foreach (var item in ele)
                 {
-                    if (formula.EndsWith("]+"))
-                    {
-                        charge = 1;
-                    }
-                    else if (int.TryParse(formula.Replace("+", "").Substring(formula.IndexOf("]") + 1), out charge) == false)
+                    if (!Array.Exists(elementStr, o => o == item.Symbol))
                     {
                         validFormula = false;
+                        break;
                     }
                 }
-                else
+
+                int charge = 0;
+                if (formula.Contains("+"))
                 {
-                    if (formula.EndsWith("+"))
+                    if (formula.Contains("]"))
                     {
-                        charge = 1;
-                    }
-                    else if (int.TryParse(formula.Substring(formula.IndexOf("+")), out charge) == false)
-                    {
-                        validFormula = false;
-                    }
-                }
-            }
-            else if (formula.Contains("-"))
-            {
-                if (formula.Contains("]"))
-                {
-                    int revCharge;
-                    if (formula.EndsWith("]-"))
-                    {
-                        charge = -1;
-                    }
-                    else if (int.TryParse(formula.Replace("-", "").Substring(formula.IndexOf("]") + 1), out revCharge) == false)
-                    {
-                        validFormula = false;
+                        if (formula.EndsWith("]+"))
+                        {
+                            charge = 1;
+                        }
+                        else if (int.TryParse(formula.Replace("+", "").Substring(formula.IndexOf("]") + 1), out charge) == false)
+                        {
+                            validFormula = false;
+                        }
                     }
                     else
                     {
-                        charge = -1 * revCharge;
+                        if (formula.EndsWith("+"))
+                        {
+                            charge = 1;
+                        }
+                        else if (int.TryParse(formula.Substring(formula.IndexOf("+")), out charge) == false)
+                        {
+                            validFormula = false;
+                        }
                     }
                 }
-                else
+                else if (formula.Contains("-"))
                 {
-                    if (formula.EndsWith("-"))
+                    if (formula.Contains("]"))
                     {
-                        charge = -1;
+                        int revCharge;
+                        if (formula.EndsWith("]-"))
+                        {
+                            charge = -1;
+                        }
+                        else if (int.TryParse(formula.Replace("-", "").Substring(formula.IndexOf("]") + 1), out revCharge) == false)
+                        {
+                            validFormula = false;
+                        }
+                        else
+                        {
+                            charge = -1 * revCharge;
+                        }
                     }
-                    else if (int.TryParse(formula.Substring(formula.IndexOf("-")), out charge))
+                    else
                     {
-                        validFormula = false;
+                        if (formula.EndsWith("-"))
+                        {
+                            charge = -1;
+                        }
+                        else if (int.TryParse(formula.Substring(formula.IndexOf("-")), out charge))
+                        {
+                            validFormula = false;
+                        }
                     }
                 }
-            }
 
-            string newForm = formula;
-            if (charge != 0)
+                string newForm = formula;
+                if (charge != 0)
+                {
+                    MolecularFormulaManipulator.AdjustProtonation(mf, -1 * charge);
+                    newForm = MolecularFormulaManipulator.GetString(mf);
+                }
+
+                Tuple<bool, string> functionReturn = new Tuple<bool, string>(validFormula, newForm);
+                return functionReturn;
+            }
+            catch
             {
-                MolecularFormulaManipulator.AdjustProtonation(mf, -1 * charge);
-                newForm = MolecularFormulaManipulator.GetString(mf);
+                return new Tuple<bool, string>(false, "");
             }
-
-            Tuple<bool, string> functionReturn = new Tuple<bool, string>(validFormula, newForm);
-            return functionReturn;
         }
     }
 }

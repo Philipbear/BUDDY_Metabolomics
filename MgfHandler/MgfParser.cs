@@ -30,7 +30,6 @@ namespace BUDDY.MgfHandler
                         record.ScanNumber = index;
                         mgfRecords.Add(record);
                         index++;
-
                     }
                 }
             }
@@ -48,6 +47,8 @@ namespace BUDDY.MgfHandler
             mgfRecord.InChiKey = "Unknown";
             mgfRecord.Formula_PC = "Unknown";
             mgfRecord.ImageLink = "open.png";
+            mgfRecord.Polarity = "P";
+            mgfRecord.Adduct = new Adduct("[M+H]+");
 
             while (sr.Peek() > -1)
             {
@@ -82,7 +83,7 @@ namespace BUDDY.MgfHandler
                             if (chargeState.Contains("+"))
                             {
                                 mgfRecord.Polarity = "P";
-                                mgfRecord.Adduct = new Adduct("[M+H]+");
+                                //mgfRecord.Adduct = new Adduct("[M+H]+");
                             }
                             else if (chargeState.Contains("-"))
                             {
@@ -100,7 +101,7 @@ namespace BUDDY.MgfHandler
                             }
                             catch
                             {
-                                mgfRecord.Adduct = new Adduct("[M-H]-");
+                                mgfRecord.Adduct = new Adduct("[M+H]+");
                             }
                             break;
                         //case "MSLEVEL":
@@ -121,7 +122,7 @@ namespace BUDDY.MgfHandler
                             if (lineEqualSplit[1].Contains("P") || lineEqualSplit[1].Contains("p"))
                             {
                                 mgfRecord.Polarity = "P";
-                                mgfRecord.Adduct = new Adduct("[M+H]+");
+                                //mgfRecord.Adduct = new Adduct("[M+H]+");
                             }
                             else
                             {
@@ -178,6 +179,8 @@ namespace BUDDY.MgfHandler
                     mgfRecord.OriSpectrum.Add(peak);
                 }
             }
+
+
             return mgfRecord;
         }
     }

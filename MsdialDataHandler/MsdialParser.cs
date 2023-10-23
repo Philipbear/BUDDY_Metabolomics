@@ -45,6 +45,8 @@ namespace BUDDY.MsdialDataHandler
             {
                 string[] items = line.Split('\t');
 
+                //Debug.WriteLine(line);
+
                 if (items[0] == "")
                 {
                     continue;
@@ -150,7 +152,7 @@ namespace BUDDY.MsdialDataHandler
                     continue;
                 }
 
-                if (items[MetaboliteNameColIndex].Contains("Unknown") == false && items[MetaboliteNameColIndex].Contains("w/o MS2") == false && items[FormulaColIndex]!= "")
+                if (items[MetaboliteNameColIndex].Contains("Unknown") == false && items[MetaboliteNameColIndex].Contains("w/o MS2") == false && items[FormulaColIndex]!= "" && items[INCHIKEYColIndex] != "")
                 {
                     // name
                     currFeature.MetaboliteName = items[MetaboliteNameColIndex];

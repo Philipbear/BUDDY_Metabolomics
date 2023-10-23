@@ -121,7 +121,7 @@ namespace BUDDY
             localSettings.Values["BUDDY_include_default"] = true;
             if (!localSettings.Values.ContainsKey("BUDDY_include"))
                 localSettings.Values["BUDDY_include"] = localSettings.Values["BUDDY_include_default"];
-            localSettings.Values["ExpSpecificGlobalAnnotation_include_default"] = true;
+            localSettings.Values["ExpSpecificGlobalAnnotation_include_default"] = false;
             if (!localSettings.Values.ContainsKey("ExpSpecificGlobalAnnotation_include"))
                 localSettings.Values["ExpSpecificGlobalAnnotation_include"] = localSettings.Values["ExpSpecificGlobalAnnotation_include_default"];
 
@@ -772,6 +772,8 @@ namespace BUDDY
             //    bformatter.Serialize(stream, fiehnHILICMS2DB);
             //}
             #endregion
+
+            //Debug.WriteLine("processor: " + Environment.ProcessorCount);
 
             if (allDatabaseLoaded == false && groupedDB.Count == 0)
             {
@@ -2011,6 +2013,9 @@ namespace BUDDY
                 }
                 posMS2DB = MS2DB.Where(o => o.IonMode == "P").ToList();
                 negMS2DB = MS2DB.Where(o => o.IonMode == "N").ToList();
+
+                //Debug.WriteLine("posDB: " + posMS2DB.Count);
+                //Debug.WriteLine("negDB: " + negMS2DB.Count);
             }
 
             var filemodel = (FileModel)dataGrid.DataContext;
@@ -2025,10 +2030,22 @@ namespace BUDDY
                 calculateMS2Progressbar.Minimum = 0;
                 calculateMS2Progressbar.Maximum = selectedMS2Count;
                 calculateMS2Progressbar.Value = 0;
+
+                string loadedMS2DBName = "";
+                if (useCustomMS2DB)
+                {
+                    loadedMS2DBName = ms2DBfileName.Substring(ms2DBfileName.LastIndexOf("\\") + 1);
+                }
+                else
+                {
+                    loadedMS2DBName = "Fiehn HILIC";
+                }
+
                 for (int i = 0; i < ms2model.MS2s.Count; i++)
                 {
                     //debug
                     //Debug.WriteLine("MS2 searching, ms2 index: " + i);
+
                     if (ms2model.MS2s[i].Selected)
                     {
                          //  seed metabolite offered by users
@@ -2084,15 +2101,7 @@ namespace BUDDY
 
 
                         ms2model.MS2s[i].Ms2Matching = new Ms2MatchingResult();
-                        if (useCustomMS2DB)
-                        {
-                            ms2model.MS2s[i].Ms2Matching.MS2DB = ms2DBfileName.Substring(ms2DBfileName.LastIndexOf("\\") + 1);
-                        }
-                        else
-                        {
-                            ms2model.MS2s[i].Ms2Matching.MS2DB = "Fiehn HILIC";
-                        }
-                        
+                        ms2model.MS2s[i].Ms2Matching.MS2DB = loadedMS2DBName;
                         ms2model.MS2s[i].Ms2Matching.MS2MatchingAlgorithm = ms2MatchingAlgorithm;
                         ms2model.MS2s[i].Ms2Matching.ms2MatchingReturns = thisLibrarySearchOutput;
 
@@ -2378,7 +2387,9 @@ namespace BUDDY
                                     // Partition the entire source array.
                                     var rangePartitioner = Partitioner.Create(0, source.Length);
                                     // Loop over the partitions in parallel.
-                                    Parallel.ForEach(rangePartitioner, (range, loopState) =>
+                                    Parallel.ForEach(rangePartitioner,
+                                        new ParallelOptions { MaxDegreeOfParallelism = Convert.ToInt32(Math.Ceiling((Environment.ProcessorCount * 0.8) * 1.0)) },
+                                        (range, loopState) =>
                                     {
                                         // Loop over each range element without a delegate invocation.
                                         for (int m = range.Item1; m < range.Item2; m++)
@@ -2466,7 +2477,9 @@ namespace BUDDY
                                         //Stopwatch w1 = new Stopwatch();
                                         //w1.Start();
                                         // fill in the formula element list in "Feature" class                                        
-                                        Parallel.ForEach(metaboliteFeatures, metaboliteFeature =>
+                                        Parallel.ForEach(metaboliteFeatures,
+                                            new ParallelOptions { MaxDegreeOfParallelism = Convert.ToInt32(Math.Ceiling((Environment.ProcessorCount * 0.8) * 1.0)) },
+                                            metaboliteFeature =>
                                         {
                                             if (metaboliteFeature.seedMetabolite)
                                             {
@@ -6766,7 +6779,7 @@ namespace BUDDY
                             {
                                 Rank1Form = currMS2.Formula_PC;
                                 MLRscore = "";
-                                EstFDR = "0";
+                                EstFDR = "NA";
                                 metaboliteName = currMS2.MetaboliteName.Replace("," , " ");
                                 inchikey = currMS2.InChiKey;
                             }
@@ -6951,7 +6964,7 @@ namespace BUDDY
                             {
                                 Rank1Form = currMS2.Formula_PC;
                                 MLRscore = "";
-                                EstFDR = "0";
+                                EstFDR = "NA";
                                 metaboliteName = currMS2.MetaboliteName.Replace(",", " ");
                                 inchikey = currMS2.InChiKey;
                             }
@@ -7654,6 +7667,18 @@ namespace BUDDY
 
             ContentDialogResult result = await noEXEDialog.ShowAsync();
         }
+        private async void InvalidLibraryImported()
+        {
+            ContentDialog noEXEDialog = new ContentDialog
+            {
+                Title = "Warning",
+                Content = "Invalid MS/MS library. Please make sure that the imported library has intact information for the following: formula, precursorMz, InChIKey and ion mode. " +
+                "\n Fiehn HILIC library will be loaded.",
+                CloseButtonText = "Ok"
+            };
+
+            ContentDialogResult result = await noEXEDialog.ShowAsync();
+        }
         private async void InvalidProjectSelected()
         {
             ContentDialog noEXEDialog = new ContentDialog
@@ -8034,12 +8059,15 @@ namespace BUDDY
                 }
             }
 
+            // parallel for each
             // Source must be array or IList.
             var source = Enumerable.Range(0, featurePairs.Count).ToArray();
             // Partition the entire source array.
             var rangePartitioner = Partitioner.Create(0, source.Length);
             // Loop over the partitions in parallel.
-            Parallel.ForEach(rangePartitioner, (range, loopState) =>
+            Parallel.ForEach(rangePartitioner,
+                new ParallelOptions { MaxDegreeOfParallelism = Convert.ToInt32(Math.Ceiling((Environment.ProcessorCount * 0.8) * 1.0)) },
+                (range, loopState) =>
             {
                 // Loop over each range element without a delegate invocation.
                 for (int i = range.Item1; i < range.Item2; i++)
@@ -8078,7 +8106,9 @@ namespace BUDDY
 
 
             // edge variable
-            Parallel.ForEach(featurePairs, featurePair =>
+            Parallel.ForEach(featurePairs,
+                new ParallelOptions { MaxDegreeOfParallelism = Convert.ToInt32(Math.Ceiling((Environment.ProcessorCount * 0.8) * 1.0)) },
+                featurePair =>
             {
                 int i = featurePair.AFeatureIndex;
                 int j = featurePair.BFeatureIndex;

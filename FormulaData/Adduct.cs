@@ -16,7 +16,7 @@ namespace BUDDY.FormulaData
     {
         public string Formula { get; set; } //full formula including square bracket
         public string Mode { get; set; }
-        public int M { get; set; } //2M de 2  [2M+H]+
+        public int M { get; set; } //2 in 2M  [2M+H]+
         public int AbsCharge { get; set; } //absolute charge [M-2H]2-:2, [M+2H]2+:2
         public List<Formula> SubFormulae { get; set; }
         public Formula SumFormula { get; set; }
@@ -28,7 +28,16 @@ namespace BUDDY.FormulaData
             // string trimFormula = formula.Trim(); //trim leading and tailing whitespace
             string trimFormula = Regex.Replace(formula, @"\s+", ""); //remove all whitespace
 
-            this.Formula = trimFormula;
+            if (trimFormula == "[M]+")
+            {
+                this.Formula = trimFormula;
+                trimFormula = "[M+H]+";
+            }
+            else
+            {
+                this.Formula = trimFormula;
+            }
+
             string modePM = trimFormula.Substring(trimFormula.Length - 1); // + or - at end of formula
             if (modePM == "+")
             {

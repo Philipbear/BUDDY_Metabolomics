@@ -371,7 +371,7 @@ namespace BUDDY.BufpHelper
                 try
                 {
                     Parallel.For(0, ms2.Spectrum.Count,
-                        new ParallelOptions { CancellationToken = cts1.Token },
+                        new ParallelOptions { CancellationToken = cts1.Token, MaxDegreeOfParallelism = Convert.ToInt32(Math.Ceiling((Environment.ProcessorCount * 0.8) * 1.0)) },
                         i =>
                     //for (int i = 0; i < ms2.Spectrum.Count; i++)
                     {
@@ -1287,7 +1287,9 @@ namespace BUDDY.BufpHelper
                     //only calculated expfragno and expfragint to filter
                     List<ValidFeature> validCandidates = new List<ValidFeature>();
 
-                    Parallel.For(0, df.Count, i =>
+                    Parallel.For(0, df.Count,
+                        new ParallelOptions { MaxDegreeOfParallelism = Convert.ToInt32(Math.Ceiling((Environment.ProcessorCount * 0.8) * 1.0)) },
+                        i =>
                     {
                         List<CFDF> sub_df = cfdf_all.Where(o => o.charged_formula == df[i].charged_formula).ToList();
 
